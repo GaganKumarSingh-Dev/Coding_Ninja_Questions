@@ -1,0 +1,24 @@
+import java.lang.Math;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void armstrong(int n){
+		if(n==1){System.out.print(true); return;};
+		int num = n;
+		int sum = 0;
+		int len = ((int)Math.log10(n))+1;
+		while(n!=0){
+			int lastdigit = n % 10;
+			sum = sum + (int)Math.pow(lastdigit,len);
+			n=n/10;
+		}
+		System.out.print((num==sum)?true:false);
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		armstrong(n);
+	}
+}
