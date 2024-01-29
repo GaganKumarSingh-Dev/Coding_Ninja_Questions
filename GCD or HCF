@@ -1,0 +1,13 @@
+public class Solution {
+    public static int calcGCD(int n, int m){
+        int hcf = 1; 
+        int x = (n>m)?m:n;
+        for(int i=x;i>0;i--){
+            if(m%i==0 && n%i==0){
+                hcf = i;
+                break;
+            }
+        }
+        return hcf;
+    }
+}
