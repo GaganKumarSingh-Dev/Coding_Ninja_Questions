@@ -1,0 +1,41 @@
+/ / less optimized code using recursion
+
+public class Solution {
+    public static long adder(long n, long sum){
+        if(n==0) return sum;
+        sum+=n;
+        return adder(--n,sum);
+    }
+    public static long sumFirstN(long n) {
+        long sum = 0;
+        return adder(n,sum);
+    }
+}
+
+/ / Optimized approach using this formula ------>>>  Sn = (n*(n+1))/2
+
+public class Solution {
+    public static long sumFirstN(long n) {
+        return (n*(n+1))/2;
+    }
+}
+
+471/4000
+
+takeUforward
+The best place to learn data structures, algorithms, most asked
+coding interview questions, real interview experiences free of cost.
+Follow Us
+DSA Playlist
+Array Series
+Tree Series
+Graph Series
+DP Series
+DSA Sheets
+Striver’s SDE Sheet
+Striver’s A2Z DSA Sheet
+SDE Core Sheet
+Striver’s CP Sheet
+Contribute
+Write an Article
+Copyright © 2023 takeuforward | All rights reserved
