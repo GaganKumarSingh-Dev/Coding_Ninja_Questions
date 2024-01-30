@@ -1,0 +1,13 @@
+public class Solution {
+    public static int[] fillNos(int arr[], int x){
+        if(x==arr.length) return arr;
+        arr[x] = ++x;
+        return fillNos(arr, x);
+    }
+
+
+    public static int[] printNos(int x) {
+        int arr[] = new int[x];
+        return fillNos(arr, 0);
+    }
+}
