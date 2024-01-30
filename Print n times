@@ -1,0 +1,13 @@
+import java.util.*;
+public class Solution {
+    public static List<String> addFunc(List ls, int n){
+        if(n==0) return ls;
+        ls.add("Coding Ninjas ");
+        return addFunc(ls,--n);
+    }
+
+    public static List<String> printNtimes(int n){
+        List<String> ls=new ArrayList<String>();
+        return addFunc(ls,n);
+    }
+}
