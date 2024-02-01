@@ -1,0 +1,20 @@
+import java.util.List;
+import java.util.ArrayList;
+
+public class Solution {
+    public static void factorial(long n, List<Long> ls, long multi, long i) {
+        multi = multi * i;
+        if (multi <= n) {
+            ls.add(multi);
+            factorial(n, ls, multi, ++i);
+        }
+    }
+
+    public static List<Long> factorialNumbers(long n) {
+        List<Long> ls = new ArrayList<Long>();
+        long multi = 1;
+        long i = 1;
+        factorial(n, ls, multi, i);
+        return ls;
+    }
+}
