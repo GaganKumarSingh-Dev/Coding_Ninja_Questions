@@ -1,0 +1,14 @@
+public class Solution {
+    static void reverse(int index,int[]nums,int[]arr,int n){
+        if(n>0){
+            arr[index]=nums[n-1];
+            reverse(index+1,nums,arr,n-1);
+        }
+    }
+    public static int[] reverseArray(int n, int []nums) {
+       int []arr =new int[n];
+       int index=0;
+       reverse(index,nums,arr,n);
+        return arr;
+    }
+}
